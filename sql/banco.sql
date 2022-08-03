@@ -1,3 +1,6 @@
+create database blog;
+use blog;
+use fluxo_caixa;
 create table usuario(
     id int not null auto_increment,
     nome varchar(50)  not null,
