@@ -15,17 +15,17 @@ function insert(string $entidade, array $dados) : string
 
 function update(string $entidade, array $dados, array $criterio = []) : string
 {
-    $instrucao = "update {$entidade}";
+    $instrucao = "UPDATE {$entidade}";
 
     foreach($dados as $campo => $dado) 
     {
         $set[] = "{$campo} = {$dado}";
     }
 
-    $instrucao .= ' set ' .implode(', ', $set);
+    $instrucao .= ' SET ' .implode(', ', $set);
 
     if(!empty($criterio)){
-        $instrucao .= ' where ';
+        $instrucao .= ' WHERE ';
 
         foreach($criterio as $expressao){
             $instrucao .= ' ' . implode(' ', $expressao);
@@ -37,10 +37,10 @@ function update(string $entidade, array $dados, array $criterio = []) : string
 
 function delete(string $entidade, array $criterio = []) : string{
     
-    $instrucao = "delete {$entidade}";
+    $instrucao = "DELETE {$entidade}";
 
     if(!empty($criterio)){
-        $instrucao .= ' where ';
+        $instrucao .= ' WHERE ';
 
         foreach($criterio as $expressao){
             $instrucao .= ' ' . implode(' ', $expressao);
@@ -52,11 +52,11 @@ function delete(string $entidade, array $criterio = []) : string{
 
 function select(string $entidade, array $campos, array $criterio =[], string $ordem = null) : string{
     
-    $instrucao = "select " . implode(', ' ,$campos);
-    $instrucao .= " from {$entidade}";
+    $instrucao = "SELECT " . implode(', ' ,$campos);
+    $instrucao .= " FROM {$entidade}";
 
     if(!empty($criterio)){
-        $instrucao .= ' where ';
+        $instrucao .= ' WHERE ';
 
         foreach($criterio as $expressao){
             $instrucao .= ' ' . implode(' ', $expressao);
@@ -65,7 +65,7 @@ function select(string $entidade, array $campos, array $criterio =[], string $or
     }
     
     if(!empty($ordem)){
-        $instrucao .= " order by $ordem";
+        $instrucao .= " ORDER BY $ordem";
 
     }
 
