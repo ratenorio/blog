@@ -1,6 +1,6 @@
 <?php
 
-require_once '../includes/funcoes.php';
+require_once '../include/funcoes.php';
 require_once '../core/conexao_mysql.php';
 require_once '../core/sql.php';
 require_once '../core/mysql.php';
@@ -26,12 +26,11 @@ function buscar_teste() : void
 }
 
 //teste update banco de dados
-function update_teste($id, $nome, $email) :void
+function update_teste($id, $nome, $email) : void
 {
     $dados = ['nome' => $nome, 'email' => $email];
     $criterio = [['id', '=', $id]];
-    atualiza('usuario', $dados, $criterio);
-    
+    atualiza('usuario', $dados,$criterio);
 }
 
 ?>
