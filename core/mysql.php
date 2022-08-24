@@ -175,8 +175,8 @@ function buscar(string $entidade, array $campos = ['*'], array $criterio = [], s
         $comando = 
         'mysqli_stmt_bind_param($stmt, ';
         $comando .= "'" . implode('', $tipo). "'";
-        $comando .= '. $' . implode(', $', $campos_criterio);
-        $comandp .= ');';
+        $comando .= ', $' . implode(', $', $campos_criterio);
+        $comando .= ');';
 
         eval($comando);
     }
