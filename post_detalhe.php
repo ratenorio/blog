@@ -23,13 +23,13 @@
         ]
     );
     $post = $posts[0];
-    $data_post = date_create($popst['data_postagem']);
+    $data_post = date_create($post['data_postagem']);
     $data_post = date_format($data_post, 'd/m/Y H:i:s');
 ?>
 <html>
     <head>
         <title><?php echo $post['titulo']?></title>
-        <link rel="stylesheet" href="lib/bootstrap-4.2.1-dist/css/bootstrap.min.css">k
+        <link rel="stylesheet" href="lib/bootstrap-4.2.1-dist/css/bootstrap.min.css">
     </head>
     <body>
         <div class="container">

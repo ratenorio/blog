@@ -72,8 +72,8 @@
                         <div class="list-group">
                             <?php
                             foreach($posts as $post):
-                                $data = date_create($post[$data_postagem]);
-                                $data = date_format($data, 's/m/Y H:i:s');
+                                $data = date_create($post['data_postagem']);
+                                $data = date_format($data, 'd/m/Y H:i:s');
                             ?>
                             <a class="list-group-item list-group-item-action"
                                 href="post_detalhe.php?post=<?php echo $post['id']?>">

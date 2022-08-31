@@ -1,5 +1,4 @@
 <?php
-echo 'teste';
 session_start();
 require_once '../includes/funcoes.php';
 require_once 'conexao_mysql.php';
@@ -123,6 +122,6 @@ switch($acao){
                 exit;
                 break;
 }
-//header('Location: ../index.php');
+header('Location: ../index.php');
 
 ?>
