@@ -44,7 +44,7 @@
                                 value="<?php echo $entidade['id'] ?? '' ?>">
                         <div class="form-group">
                             <label for="nome">Nome</label>
-                            <input type="form-control" type="text"
+                            <input class="form-control" type="text"
                                 require="required" id="nome" name="nome"
                                 value="<?php echo $entidade['nome'] ?? ''?>">
                         </div>
